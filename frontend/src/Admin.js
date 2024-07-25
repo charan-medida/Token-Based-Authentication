@@ -48,7 +48,7 @@ export function Admin() {
   const handleSubmit = async () => {
     if (validateForm()) {
       try {
-        const response = await axios.post('http://localhost:5002/sub', formData);
+        const response = await axios.post('https://token-based-authentication.onrender.com/sub', formData);
         console.log('Data added successfully:', response.data);
 
         fetchUpdatedData();
@@ -62,7 +62,7 @@ export function Admin() {
 
   const fetchUpdatedData = async () => {
     try {
-      const response = await axios.get('http://localhost:5002/sub');
+      const response = await axios.get('https://token-based-authentication.onrender.com/sub');
       console.log('Updated data:', response.data);
       setFetchedData(response.data);
       setFormData({

@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const fetchProtectedData = async (token) => {
     try {
-      const response = await axios.get('http://localhost:5002/protected', {
+      const response = await axios.get('https://token-based-authentication.onrender.com/protected', {
         headers: { Authorization: `Bearer ${token}` }
       });
       return response.data;

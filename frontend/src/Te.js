@@ -40,7 +40,7 @@ export function Te() {
     formData.append('image', selectedFile);
 
     try {
-      const response = await axios.post('http://localhost:5002/upload', formData, {
+      const response = await axios.post('https://token-based-authentication.onrender.com/upload', formData, {
         headers: {
           'X-User-Name': 'Charan',
           'Content-Type': 'multipart/form-data',

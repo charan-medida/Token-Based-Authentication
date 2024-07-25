@@ -68,7 +68,7 @@ export function Register() {
     const handleRegister = async () => {
         if (validateForm()) {
             try {
-                 await axios.post('http://localhost:5002/register', {
+                 await axios.post('https://token-based-authentication.onrender.com/register', {
                     username: formData.username,
                     password: formData.password ,
                    email:formData.email
